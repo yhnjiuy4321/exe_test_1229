@@ -1,0 +1,20 @@
+# PyInstaller 生成的檔案
+build/
+dist/
+*.spec
+# (註: .spec 看你想不想傳，通常小型專案我會留著，不想傳就解開上面那行的註解)
+
+# Python 編譯檔
+__pycache__/
+*.py[cod]
+
+# PyCharm 設定檔
+.idea/
+
+# 虛擬環境
+venv/
+.venv/
+env/
+
+# 其他常見垃圾
+.DS_Store
