@@ -10,4 +10,4 @@ def calculate_q(c, i, a):
         raise ValueError("數值不能為負數")
 
     # 回傳計算結果
-    return (c * i * a) / 3.6
+    return c * i * a
