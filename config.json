@@ -1,0 +1,13 @@
+{
+  "window": {
+    "width": 1024,
+    "height": 768,
+    "theme": "dark-blue"
+  },
+  "defaults": {
+    "b": 20.0,
+    "z": 1.5,
+    "n": 0.013,
+    "s": 0.005
+  }
+}

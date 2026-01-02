@@ -1,7 +1,7 @@
 # 檔案位置：main.py (在最外層)
 
 # ▼▼▼ 關鍵連接 3：從 core 資料夾匯入 gui ▼▼▼
-from core.gui import start_gui
+from gui.app import App
 
 # ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
 
@@ -10,4 +10,5 @@ if __name__ == "__main__":
     print("程式啟動中...")
 
     # 啟動介面
-    start_gui()
+    app = App()
+    app.start()

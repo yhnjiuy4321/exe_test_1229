@@ -1,8 +1,11 @@
-def calculate_q(c, i, a):
+def calculate_q(c: float, i: float, a: float) -> float:
     """
-    純粹的數學計算，不涉及任何視窗介面。
+    計算流量
+    :param c: 逕流係數 (0.0 ~ 1.0)
+    :param i: 降雨強度 (mm/hr)
+    :param a: 面積 (ha)
+    :return: 流量 CMS
     """
-    # 這裡做邏輯檢查
     if not (0 < c <= 1.0):
         raise ValueError("逕流係數 (C) 必須在 0 到 1 之間")
 
