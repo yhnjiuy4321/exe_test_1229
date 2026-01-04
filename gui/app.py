@@ -4,6 +4,8 @@ import os
 import core.utility
 from gui.tabs import HydroCalcTab, FileReaderTab, ChannelTab
 from core.configLoader import load_config
+import tkinter as tk
+from gui.menuBar import MenuBar
 
 
 class App(ctk.CTk):
@@ -13,12 +15,12 @@ class App(ctk.CTk):
 
         # --- 基礎視窗設定 ---
         self.title('多功能工具箱 Pro')
-        self.config = load_config()
+        self.app_config = load_config()
         ctk.set_appearance_mode("System")
         ctk.set_default_color_theme("blue")
 
-        w = self.config["window"]["width"]
-        h = self.config["window"]["height"]
+        w = self.app_config["window"]["width"]
+        h = self.app_config["window"]["height"]
         self.geometry(f"{w}x{h}")
 
         # 設定圖示
@@ -28,6 +30,10 @@ class App(ctk.CTk):
 
         except:
             pass
+
+        # --- 建立選單列 ---
+        self.menu_bar = MenuBar(self)
+        self.menu_bar.pack(fill="x")
 
         # --- 建立 TabView ---
         self.tabview = ctk.CTkTabview(self, width=550, height=500)
